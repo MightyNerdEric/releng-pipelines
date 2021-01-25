@@ -25,5 +25,5 @@
  * block.
  */
 def call(body) {
-    parallel{body}
+    return(parallel{body})
 }
