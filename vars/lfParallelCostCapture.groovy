@@ -22,7 +22,7 @@ def call() {
     try {
         unstash "stack-cost"
         stack_cost = sh(script: "cat stack-cost | awk '{print \$2}", returnStdout: true)
-    } catch(groovy.lang.MissingPropertyException e) {
+    } catch(Exception e) {
         stack_cost = 0
     }
 
