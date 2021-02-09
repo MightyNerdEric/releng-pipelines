@@ -1,4 +1,6 @@
-float cost = 0
+package org.lf
+
+def float cost = 0
 
 def addCost() {
     sh(script: libraryResource('shell/job-cost.sh'))
@@ -11,5 +13,6 @@ def getCost() {
 }
 
 def writeStackCost() {
+    // Add logic to check for extant stack-cost first
     sh("echo total: ${cost} > stack-cost")
 }
